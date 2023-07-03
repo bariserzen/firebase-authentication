@@ -9,7 +9,7 @@ const Signup = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
 
   const {createUser} = UserAuth();
   const navigate = useNavigate();
@@ -17,12 +17,12 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    // setError('');
     try {
       await createUser(email, password);
       navigate('/account')
     } catch (e) {
-      setError(e.message);
+      // setError(e.message);
     }
   };
 

@@ -8,19 +8,19 @@ const Signin = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
   const navigate = useNavigate();
   const { signIn } = UserAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    // setError('');
     try {
       await signIn(email, password);
       navigate('/account');
     }
     catch (e) {
-      setError(e.message);
+      // setError(e.message);
     }
   }
 
